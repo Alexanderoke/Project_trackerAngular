@@ -12,6 +12,14 @@ export class ViewProjectsComponent implements OnInit {
   ProjectList:any=[];
 
   ngOnInit(): void {
+    this.refreshProjectList();
   }
 
+
+  refreshProjectList(){
+    this.service.getProjectList().subscribe(data=>{
+      this.ProjectList=data;
+    });
+
+  }
 }
