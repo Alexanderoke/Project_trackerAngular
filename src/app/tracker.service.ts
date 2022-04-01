@@ -10,6 +10,10 @@ export class TrackerService {
 
   constructor(private http:HttpClient) { }
 
+  getProjectList():Observable<any[]>{
+    return this.http.get<any[>](this.APIUrl +'')
+  }
+
   // methods to consume the get, post, update and delete  Apis here.
 
 }
