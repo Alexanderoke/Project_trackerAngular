@@ -9,7 +9,7 @@ export class ViewProjectsComponent implements OnInit {
 
   constructor(private service:TrackerService) { }
 
-  ProjectList:any=[];
+  UsersList:any=[];
 
   ngOnInit(): void {
     this.refreshProjectList();
@@ -17,8 +17,8 @@ export class ViewProjectsComponent implements OnInit {
 
 
   refreshProjectList(){
-    this.service.getProjectList().subscribe(data=>{
-      this.ProjectList=data;
+    this.service.getUsersList().subscribe(data=>{
+      this.UsersList=data;
     });
 
   }

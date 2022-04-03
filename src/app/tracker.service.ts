@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TrackerService {
-  readonly APIUrl ="";
+  readonly APIUrl ="/api/users?page=2";
 
   constructor(private http:HttpClient) { }
 
-  getProjectList():Observable<any[]>{
-    return this.http.get<any[>](this.APIUrl +'')
+  getUsersList():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl +'/project/')
   }
 
   // methods to consume the get, post, update and delete  Apis here.
