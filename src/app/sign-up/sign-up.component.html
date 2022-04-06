@@ -1,7 +1,7 @@
 <div class="displayTable">
     <div class="displayTableCell">
       <div class="authBlock">
-        <h3>Sign Up</h3>
+        <h3><strong>Sign Up</strong></h3>
         <div class="formGroup">
           <input
             type="email"
@@ -13,9 +13,27 @@
         </div>
         <div class="formGroup">
           <input
+            type="username"
+            class="formControl"
+            placeholder="Username"
+            #userPwd
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
             type="password"
             class="formControl"
             placeholder="Password"
+            #userPwd
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="password"
+            class="formControl"
+            placeholder="Confirm Password"
             #userPwd
             required
           />
@@ -46,7 +64,7 @@
       <div class="redirectToLogin">
         <span
           >Already have an account?
-          <span class="redirect" routerLink="/sign-in">Log In</span></span
+          <span class="redirect" routerLink="/sign-in"><strong>Log In</strong></span></span
         >
       </div>
     </div>

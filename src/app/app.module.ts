@@ -23,6 +23,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthService } from './shared/services/auth.service';
+import { HomePageComponent } from './home-page/home-page.component';
     
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AuthService } from './shared/services/auth.service';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    HomePageComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

@@ -142,7 +142,7 @@ input:-moz-placeholder {
   font-size: 16px;
   font-weight: 600;
   padding: 15px 0;
-  background: #f96ea8;
+  background: navy;
   color: #ffffff;
   cursor: pointer;
   outline: none;
@@ -158,7 +158,7 @@ input:-moz-placeholder {
 }
 
 .displayTable .googleBtn {
-  background: #4dd5fe;
+  background: navy;
 }
 
 .displayTable .facebookBtn {
@@ -212,7 +212,7 @@ input:-moz-placeholder {
 }
 
 .forgotPassword span {
-  color: #4dd5fe;
+  color: black;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -226,12 +226,12 @@ input:-moz-placeholder {
   font-size: 14px;
   font-weight: 400;
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 .redirectToLogin .redirect {
   cursor: pointer;
-  color: #ffffff;
+  color: navy;
   text-decoration: underline;
 }
 
