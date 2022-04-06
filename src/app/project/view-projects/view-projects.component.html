@@ -1,5 +1,30 @@
 <p>view-projects works!</p>
-<h5 *ngfor ="let dataItem of UsersList">
-  {{dataItem.email}}
-  {{dataItem.first_name}}
-</h5>h5>
+
+<table class="table table striped" >
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Projects</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor = "let project of ProjectList">
+      <td>{{ project.id }}</td>
+      <td>{{project.project_name}}</td>
+      <td>{{ project.project_type }}</td>
+      <td>{{ project.project_landingpage }}</td>
+      <td>{{ project.project_description }}</td>
+      <td>{{ project.project_owner }}</td>
+      <td>{{ project.project_member1 }}</td>
+      <td>{{ project.project_member2 }}</td>
+      <td>{{ project.project_member3 }}</td>
+      <td>{{ project.project_member4 }}</td>
+      <td>{{ project.project_member5 }}</td>
+      <td>{{ project.project_member6 }}</td>
+      <td>{{ project.github_link }}</td>
+
+    </tr>
+  </tbody>
+
+</table>
