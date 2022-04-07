@@ -1,20 +1,85 @@
-<h3><strong>Upload new project</strong></h3>
+<div class="uplod">
+  <div class="uplodProject">
+    <div class="uplodKenben">
+      <h3><strong>Upload new project</strong></h3>
 
-<form action="/action_page.php">
-  <label>Project name</label> 
-  <input type="text"  placeholder="Project name" value=""><br><br>
-  <label>Description</label>
-  <input type="text"  placeholder="Description" value=""><br><br>
-  <label>Owner/Member</label>
-  <input type="text"  placeholder="Owner/Member" value=""><br><br>
-  <label>Language</label>
-  <input type="text"  placeholder="Language" value=""><br><br>
-  <label>Category</label>
-  <input type="text"  placeholder="Category" value=""><br><br>
-  <label>Github Link</label>
-  <input type="text"  placeholder="Github link" value=""><br><br>
-  <label>Project Landing Page</label>
-  <input type="text"  placeholder="Live link" value=""><br><br>
+      <form action="/action_page.php">
+        <label>Project name</label>
+          <input type="text"  placeholder="Project name" value=""><br><br>
+          <label>Description</label>
+          <input type="text"  placeholder="Description" value=""><br><br>
+          <label>Owner/Member</label>
+          <input type="text"  placeholder="Owner/Member" value=""><br><br>
+          <label>Language</label>
+          <input type="text"  placeholder="Language" value=""><br><br>
+          <label>Category</label>
+          <input type="text"  placeholder="Category" value=""><br><br>
+          <label>Github Link</label>
+          <input type="text"  placeholder="Github link" value=""><br><br>
+          <label>Project Landing Page</label>
+          <input type="text"  placeholder="Live link" value=""><br><br>
+          <div class="btnSubmit">
+            <button style="background-color: navy;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
+              <strong>Submit Project</strong>
+            </button>
+          </div>
+            
+      </form> 
 
-  <input type="Submit" value="Submit">
-</form> 
+    </div>
+   
+  </div>
+</div>
+
+<style>
+h3 {
+text-align: center;
+font-size: 22px;
+margin: 0 0 20px;
+}
+
+.uplod {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.uplodProject {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 22px;
+  margin: 0 0 20px;
+}
+
+.uplodKenben {
+  margin: 0 auto;
+  max-width: 400px;
+  background: white;
+  padding: 30px 40px 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+.btnSubmit {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  width: auto;
+  height: auto;
+}
+</style>
