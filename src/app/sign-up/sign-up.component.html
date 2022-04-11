@@ -8,8 +8,7 @@
             class="formControl"
             placeholder="Email Address"
             #userEmail
-            required
-          />
+            required/>
         </div>
         <div class="formGroup">
           <input
@@ -17,8 +16,7 @@
             class="formControl"
             placeholder="Username"
             #userPwd
-            required
-          />
+            required/>
         </div>
         <div class="formGroup">
           <input
@@ -26,8 +24,7 @@
             class="formControl"
             placeholder="Password"
             #userPwd
-            required
-          />
+            required/>
         </div>
         <div class="formGroup">
           <input
@@ -35,16 +32,14 @@
             class="formControl"
             placeholder="Confirm Password"
             #userPwd
-            required
-          />
+            required/>
         </div>
         <div class="formGroup">
           <input
             type="button"
             class="btn btnPrimary"
             value="Sign Up"
-            (click)="authService.SignUp(userEmail.value, userPwd.value)"
-          />
+            (click)="authService.SignUp(userEmail.value, userPwd.value)"/>
         </div>
         <div class="formGroup">
           <span class="or"><span class="orInner">Or</span></span>
@@ -54,18 +49,16 @@
           <button
             type="button"
             class="btn googleBtn"
-            (click)="authService.GoogleAuth()"
-          >
+            (click)="authService.GoogleAuth()">
             <i class="fab fa-google-plus-g"></i>
             Continue with Google
           </button>
         </div>
       </div>
       <div class="redirectToLogin">
-        <span
-          >Already have an account?
-          <span class="redirect" routerLink="/sign-in"><strong>Log In</strong></span></span
-        >
+        <span>Already have an account?
+          <span class="redirect" routerLink="/sign-in"><strong>Log In</strong></span></span><br>
+          <button style="background-color: navy; color: white;" routerLink="/home-page"><strong>Back</strong></button>
       </div>
     </div>
   </div>

@@ -662,3 +662,86 @@ body .table thead th {
     display: none;
   }
 }
+
+body {
+    background-color: navy;
+}
+
+.navbar {
+    background-color: white;
+    overflow: hidden;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+.landing {
+  height: 88vh;
+  background-color: navy;
+}
+   
+.landingHeader {
+    color: white;
+    text-align: center;
+    font-family: Times New Roman;
+}
+  
+.landingContent {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-right: 3%;
+}
+#img{
+  display: flex;
+  justify-content: space-between;
+}
+
+#image{
+  padding-left: 3%;
+  height: 25rem;
+}
+
+
+.social-footer {
+  height: 20vh;
+  padding: 1rem;
+  background: black;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+  justify-items: center;
+  text-align: center;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;;
+}
+
+.menuSimple>img{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerHead {
+  background-color: navy;
+  color: white;
+  height: 8vh;
+}

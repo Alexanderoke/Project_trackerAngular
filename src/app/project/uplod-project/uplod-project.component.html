@@ -1,40 +1,48 @@
 <div class="uplod">
-  <div class="uplodProject">
-    <div class="uplodKenben">
-      <h3><strong>Upload new project</strong></h3>
+    <div class="uplodProject">
+      <div class="uplodKenben">
+      <h3 style="font-size: 25px;"><strong>Upload new project</strong></h3>
 
-      <form action="/action_page.php">
-        <label>Project name</label>
-          <input type="text"  placeholder="Project name" value=""><br><br>
-          <label>Description</label>
-          <input type="text"  placeholder="Description" value=""><br><br>
-          <label>Owner/Member</label>
-          <input type="text"  placeholder="Owner/Member" value=""><br><br>
-          <label>Language</label>
-          <input type="text"  placeholder="Language" value=""><br><br>
-          <label>Category</label>
-          <input type="text"  placeholder="Category" value=""><br><br>
-          <label>Github Link</label>
-          <input type="text"  placeholder="Github link" value=""><br><br>
-          <label>Project Landing Page</label>
-          <input type="text"  placeholder="Live link" value=""><br><br>
+      <form class="form-inline" action="/action_page.php">
+        <label style="font-size: 19px;">Project name</label>
+          <input style="font-size: 19px;"  type="text"  placeholder="Project name" value=""><br><br>
+          <label style="font-size: 19px;">Description</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Description" value=""><br><br>
+          <label style="font-size: 19px;" >Owner/Member</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Owner/Member" value=""><br><br>
+          <label style="font-size: 19px;" >Language</label>
+          <select style="font-size: 19px;" id="language" name="language">
+            <option value=""></option>
+            <option value="html">Html</option>
+            <option value="angular">Angular</option>
+            <option value="python">Python</option>
+            <option value="django">Django</option>
+          </select>
+          <label style="font-size: 19px;" >Category</label>
+          <select style="font-size: 19px;" id="category" name="category">
+            <option value=""></option>
+            <option value="hybrid">Hybrid</option>
+            <option value="remote">Remote</option>
+          </select><br><br>
+          <label style="font-size: 19px;" >Github Link</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Github link" value=""><br><br>
+          <label style="font-size: 19px;">Project Landing Page</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Live link" value=""><br><br>
           <div class="btnSubmit">
-            <button style="background-color: navy; color: white;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
+            <button style="background-color: navy; color: white; font-size: 19px;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
               <strong>Submit Project</strong>
-            </button>
-          </div>
-            
+            </button><br><br>
+            <button style="background-color: navy; color: white;" routerLink="/home-page"><strong>Back</strong></button>
+          </div>            
       </form> 
-
     </div>
-   
   </div>
 </div>
 
 <style>
 h3 {
 text-align: center;
-font-size: 22px;
+font-size: 30px;
 margin: 0 0 20px;
 }
 
@@ -48,6 +56,7 @@ margin: 0 0 20px;
   vertical-align: middle;
   width: 100%;
   height: 100%;
+  font-size: 16px;
 }
 
 h3 {
@@ -57,6 +66,7 @@ h3 {
 }
 
 .uplodKenben {
+  font-size: 16px;
   margin: 0 auto;
   max-width: 400px;
   background: white;
@@ -78,8 +88,9 @@ label {
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   width: auto;
   height: auto;
 }
+
 </style>

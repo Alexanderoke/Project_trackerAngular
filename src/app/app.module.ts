@@ -9,6 +9,7 @@ import { ViewProjectsComponent } from './project/view-projects/view-projects.com
 import { TrackerService } from './tracker.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
 
 // Firebase services + environment module
 import { AngularFireModule } from '@angular/fire/compat';
@@ -23,8 +24,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthService } from './shared/services/auth.service';
-import { HomePageComponent } from './home-page/home-page.component';
-    
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    HomePageComponent
+    HomePageComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
