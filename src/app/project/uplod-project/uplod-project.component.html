@@ -1,1 +1,96 @@
-<p>uplod-project works!</p>
+<div class="uplod">
+    <div class="uplodProject">
+      <div class="uplodKenben">
+      <h3 style="font-size: 25px;"><strong>Upload new project</strong></h3>
+
+      <form class="form-inline" action="/action_page.php">
+        <label style="font-size: 19px;">Project name</label>
+          <input style="font-size: 19px;"  type="text"  placeholder="Project name" value=""><br><br>
+          <label style="font-size: 19px;">Description</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Description" value=""><br><br>
+          <label style="font-size: 19px;" >Owner/Member</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Owner/Member" value=""><br><br>
+          <label style="font-size: 19px;" >Language</label>
+          <select style="font-size: 19px;" id="language" name="language">
+            <option value=""></option>
+            <option value="html">Html</option>
+            <option value="angular">Angular</option>
+            <option value="python">Python</option>
+            <option value="django">Django</option>
+          </select>
+          <label style="font-size: 19px;" >Category</label>
+          <select style="font-size: 19px;" id="category" name="category">
+            <option value=""></option>
+            <option value="hybrid">Hybrid</option>
+            <option value="remote">Remote</option>
+          </select><br><br>
+          <label style="font-size: 19px;" >Github Link</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Github link" value=""><br><br>
+          <label style="font-size: 19px;">Project Landing Page</label>
+          <input style="font-size: 19px;" type="text"  placeholder="Live link" value=""><br><br>
+          <div class="btnSubmit">
+            <button style="background-color: navy; color: white; font-size: 19px;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
+              <strong>Submit Project</strong>
+            </button><br><br>
+            <button style="background-color: navy; color: white;" routerLink="/home-page"><strong>Back</strong></button>
+          </div>            
+      </form> 
+    </div>
+  </div>
+</div>
+
+<style>
+h3 {
+text-align: center;
+font-size: 30px;
+margin: 0 0 20px;
+}
+
+.uplod {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.uplodProject {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 22px;
+  margin: 0 0 20px;
+}
+
+.uplodKenben {
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 400px;
+  background: white;
+  padding: 30px 40px 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+.btnSubmit {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+}
+
+</style>
