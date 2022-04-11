@@ -21,6 +21,10 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'uplod-project', component:  UplodProjectComponent },
   { path: 'view-projects', component:  ViewProjectsComponent },
+import { ProjectComponent } from './project/project.component';
+
+const routes: Routes = [
+  {path: 'project', component:ProjectComponent},
 ];
 
 @NgModule({
