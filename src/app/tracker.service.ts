@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Apireceive } from './apireceive';
+// import { Apireceive } from './apireceive';
 @Injectable({
   providedIn: 'root'
 })
 export class TrackerService {
-  readonly APIUrl = "https://trakadrf.herokuapp.com/project/";
+  readonly APIUrl = "http://127.0.0.1:8000/api/register/";
+  // "https://trakadrf.herokuapp.com/project"
 
   constructor(private http:HttpClient) { }
 
-   getProjectList(): Observable <Apireceive>{
-     return this.http.get<Apireceive>(this.APIUrl + '/project/');
-
-
-  // uploadProject(val:any){
-  // return this.http.post(this.APIUrl + '/project/',val);
-
-  // methods to consume the get, post, update and delete  Apis here.
-
+   getProjectList(): Observable <any[]>{
+     return this.http.get<any[]>(this.APIUrl );  
 }
+
+  uploadProject(val:any){
+  return this.http.post(this.APIUrl,val);
+  }
+
+  registerUser(userData: any): Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/api/register/',userData)
+  }
+  // methods to consume the get, post, update and delete  Apis here.
 }

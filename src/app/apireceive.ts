@@ -1,3 +1,3 @@
-export class Apireceive {
-  constructor(public data:any){}
-}
+// export class Apireceive {
+//   constructor(public data:any){}
+// }

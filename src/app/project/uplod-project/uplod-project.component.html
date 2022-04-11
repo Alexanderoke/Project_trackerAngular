@@ -1,1 +1,57 @@
 <p>uplod-project works!</p>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form #userPost="ngForm" (ngSubmit)= "onSubmit()" >
+            <label>Project Type</label>
+              <input type="text"  placeholder="Project type" name="project_type" ngModel><br><br>
+              <label>Project Landing Page</label>
+              <input type="file"  placeholder="Live link" name="project_landingpage" ngModel><br><br>
+              <label>Description</label>
+              <input type="text"  placeholder="Description" name="project_description" ngModel><br><br>
+              <label>Owner</label>
+              <input type="text"  placeholder="Owner/Member" name="project_owner" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member1" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member2" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member3" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member4" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member5" ngModel><br><br>
+              <label>Member</label>
+              <input type="text"  placeholder="Member" name="project_member6" ngModel><br><br>
+              <label>Github Link</label>
+              <input type="text"  placeholder="Github link" name="github_link" ngModel><br><br>
+              
+              <!-- <div class="btnSubmit">
+                <button style="background-color: navy; color: white;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
+                  <strong>Submit Project</strong>
+                </button>
+              </div> -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+                
+          </form>
+
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
