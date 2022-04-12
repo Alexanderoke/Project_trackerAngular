@@ -22,5 +22,9 @@ export class TrackerService {
   registerUser(userData: any): Observable<any>{
     return this.http.post('http://127.0.0.1:8000/api/register/',userData)
   }
+
+  loginUser(userData: any): Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/api/login/',userData)
+  }
   // methods to consume the get, post, update and delete  Apis here.
 }
