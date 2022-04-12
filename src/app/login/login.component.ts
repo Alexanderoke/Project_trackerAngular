@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
       response =>{
         alert('User'+this.login.username +'succesfully logged in!')
       },
-      error =>console.log('error',error)
+      error =>alert('hakuna User kama huyo hapa hebu toka hapa')
       
     );
   }

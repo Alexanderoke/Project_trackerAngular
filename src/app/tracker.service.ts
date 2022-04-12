@@ -6,21 +6,26 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TrackerService {
-  readonly APIUrl = "http://127.0.0.1:8000/api/register/";
+  readonly APIUrl = "http://127.0.0.1:8000";
   // "https://trakadrf.herokuapp.com/project"
+  readonly PhotoUrl = "http://127.0.0.1:8000/media/"
 
   constructor(private http:HttpClient) { }
 
    getProjectList(): Observable <any[]>{
-     return this.http.get<any[]>(this.APIUrl );  
+     return this.http.get<any[]>(this.APIUrl+ '/project/' );  
 }
 
   uploadProject(val:any){
-  return this.http.post(this.APIUrl,val);
+  return this.http.post(this.APIUrl +'/project/',val);
+  }
+
+  UploadPhoto(val:any){
+    return this.http.post(this.APIUrl+'/SaveFile/', val);
   }
 
   registerUser(userData: any): Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/api/register/',userData)
+    return this.http.post('http://127.0.0.1:8000/api/register/',userData);
   }
 
   loginUser(userData: any): Observable<any>{

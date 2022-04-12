@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router,ParamMap } from '@angular/router';
 
-export class UsersList {
-  constructor(
-    public id: number,
-    public first_tname: string,
-    public last_name: string,
-    public department: string,
-    public email: string,
+// export class UsersList {
+//   constructor(
+//     public id: number,
+//     public first_tname: string,
+//     public last_name: string,
+//     public department: string,
+//     public email: string,
     
-  ) {
-  }
-}
+//   ) {
+//   }
+// }
 
 @Component({
   selector: 'app-project',
@@ -20,7 +20,7 @@ export class UsersList {
 })
 export class ProjectComponent implements OnInit {
 
-  users!:UsersList[];
+  // projects!:UsersList[];
 
   constructor(private route: ActivatedRoute,private router:Router) { }
 

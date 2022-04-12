@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   registerUser(){
     this.userService.registerUser(this.register).subscribe(
       response =>{
-        alert('User'+this.register.username +'succesfully created!')
+        alert('User'+''+this.register.username +'succesfully created!')
       },
       error =>console.log('error',error)
       

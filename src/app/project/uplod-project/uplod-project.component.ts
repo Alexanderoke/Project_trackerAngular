@@ -44,7 +44,7 @@ export class UplodProjectComponent implements OnInit {
   }
   onSubmit(){
     let val= {
-      project_type:this.project_type,
+    project_type:this.project_type,
     project_landingpage:this.project_landingpage,
     project_description:this.project_description,
     project_owner:this.project_owner,
@@ -57,7 +57,7 @@ export class UplodProjectComponent implements OnInit {
     github_link:this.github_link,
     };
     this.service.uploadProject(val).subscribe(res=>{alert(res.toString());
-    })
+    });
     // this.http.post('https://trakadrf.herokuapp.com/project',val).subscribe((val)=>{
       // console.warn("val",val)
 
