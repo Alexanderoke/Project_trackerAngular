@@ -3,49 +3,16 @@
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="container">
-          <form #userPost="ngForm" (ngSubmit)= "onSubmit()" >
-            <label>Project Type</label>
-              <input type="text"  placeholder="Project type" name="project_type" ngModel><br><br>
-              <label>Project Landing Page</label>
-              <input type="file"  placeholder="Live link" name="project_landingpage" ngModel><br><br>
-              <label>Description</label>
-              <input type="text"  placeholder="Description" name="project_description" ngModel><br><br>
-              <label>Owner</label>
-              <input type="text"  placeholder="Owner/Member" name="project_owner" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member1" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member2" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member3" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member4" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member5" ngModel><br><br>
-              <label>Member</label>
-              <input type="text"  placeholder="Member" name="project_member6" ngModel><br><br>
-              <label>Github Link</label>
-              <input type="text"  placeholder="Github link" name="github_link" ngModel><br><br>
-              
-              <!-- <div class="btnSubmit">
-                <button style="background-color: navy; color: white;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
-                  <strong>Submit Project</strong>
-                </button>
-              </div> -->
-              <button type="submit" class="btn btn-primary">Submit</button>
-                
-          </form>
-
-        </div>
+        <app-uplod-project [proj] = "proj" *ngIf="ActivateAddEditPrjComp" ></app-uplod-project>
+        
         
       </div>
       <div class="modal-footer">
@@ -55,3 +22,59 @@
     </div>
   </div>
 </div>
+
+
+ --> 
+ <div class="form-group row">
+
+  <!-- <label class="col-sm-2 col-form-label">Department Name</label> -->
+  <div class="col-sm-10">
+    
+      <!-- <form #userPost="ngForm" (ngSubmit)= "onSubmit()" > -->
+        <label>Project Name</label>
+          <input type="text"  placeholder="Project name" name="project_name" [(ngModel)] ="project_name"><br><br>
+        <label>Project Type</label>
+          <input type="text"  placeholder="Project type" name="project_type" [(ngModel)] ="project_type"><br><br>
+          <label>Project Landing Page</label>
+          <input type="file"  placeholder="Live link" name="project_landingpage" accept="image/*" [(ngModel)] ="project_landingpage"><br><br>
+          <label>Description</label>
+          <input type="text"  placeholder="Description" name="project_description" [(ngModel)] ="project_description"><br><br>
+          <label>Owner</label>
+          <input type="text"  placeholder="Owner/Member" name="project_owner" [(ngModel)] ="project_owner"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member1" [(ngModel)] ="project_member1"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member2" [(ngModel)] ="project_member2"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member3" [(ngModel)] ="project_member3"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member4" [(ngModel)] ="project_member4"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member5" [(ngModel)] ="project_member5"><br><br>
+          <label>Member</label>
+          <input type="text"  placeholder="Member" name="project_member6" [(ngModel)] ="project_member6"><br><br>
+          <label>Github Link</label>
+          <input type="text"  placeholder="Github link" name="github_link" [(ngModel)] ="github_link"><br><br>
+          
+          <!-- <div class="btnSubmit">
+            <button style="background-color: navy; color: white;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitProject">
+              <strong>Submit Project</strong>
+            </button>
+          </div> -->
+          <!-- <!-- <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            
+      <!-- </form> -->
+
+    
+      <!-- <input type="text" class="form-control" [(ngModel)] ="proj.project_type" -->
+      <!-- placeholder="Enter Department Name"> -->
+  </div>
+</div>
+
+<button (click) ="onSubmit()" *ngIf ="proj.ProjectId==0"  class="btn btn-primary">
+  Upload Project
+</button>
+
+<button (click) ="updateProject()" *ngIf ="proj.ProjectId!=0" class="btn btn-primary">
+  Update
+</button> 

@@ -20,18 +20,18 @@ import { ActivatedRoute,Router,ParamMap } from '@angular/router';
 })
 export class ProjectComponent implements OnInit {
 
-  // projects!:UsersList[];
+  
 
   constructor(private route: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  viewProjects(){
-    this.router.navigate(['view'],{relativeTo: this.route});
-  }
+  // viewProjects(){
+  //   this.router.navigate(['view'],{relativeTo: this.route});
+  // }
 
-  uplodProject(){
-    this.router.navigate(['uplod'],{relativeTo: this.route});
-  }
+  // uplodProject(){
+  //   this.router.navigate(['uplod'],{relativeTo: this.route});
+  // }
 }

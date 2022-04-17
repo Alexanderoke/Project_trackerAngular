@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 // import { Apireceive } from './apireceive';
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,21 @@ export class TrackerService {
      return this.http.get<any[]>(this.APIUrl+ '/project/' );  
 }
 
-  uploadProject(val:any){
-  return this.http.post(this.APIUrl +'/project/',val);
+  uploadProject(input:any){
+  return this.http.post<any>(this.APIUrl +'/project/',input);
   }
 
   UploadPhoto(val:any){
     return this.http.post(this.APIUrl+'/SaveFile/', val);
+  }
+
+
+  updateProject(val:any){
+    return this.http.put(this.APIUrl +'/project/',val);
+  }
+
+  deleteProject(del:any){
+    return this.http.delete(this.APIUrl + '/project/',del);
   }
 
   registerUser(userData: any): Observable<any>{

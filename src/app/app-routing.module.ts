@@ -10,10 +10,10 @@ const routes: Routes = [
   {path: 'register', component:RegisterComponent},
   {path: 'login', component:LoginComponent},
   {path: 'project', component:ProjectComponent,
-children: [
-  {path: 'view',component: ViewProjectsComponent },
-  {path: 'uplod' , component: UplodProjectComponent }
-]
+// children: [
+  // {path: 'view',component: ViewProjectsComponent },
+  // {path: 'uplod' , component: UplodProjectComponent }
+// ]
 },
   
 ];

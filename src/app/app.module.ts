@@ -11,6 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RegisterComponent } from './register/register.component';
     UplodProjectComponent,
     ViewProjectsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TrackerService } from '../tracker.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { TrackerService } from '../tracker.service';
 export class RegisterComponent implements OnInit {
   register!: { username: string; password: string; email: string; };
 
-  constructor(private userService:TrackerService) { }
+  constructor(private userService:TrackerService, private http:HttpClient, private router: Router ) { }
 
   ngOnInit() {
     this.register = {
@@ -21,8 +23,9 @@ export class RegisterComponent implements OnInit {
   }
   registerUser(){
     this.userService.registerUser(this.register).subscribe(
-      response =>{
-        alert('User'+''+this.register.username +'succesfully created!')
+      res =>{
+        alert('User'+' '+this.register.username +'succesfully created!')
+        this.router.navigate(['/login'])
       },
       error =>console.log('error',error)
       

@@ -8,11 +8,14 @@ import { TrackerService } from 'src/app/tracker.service';
   styleUrls: ['./view-projects.component.css']
 })
 export class ViewProjectsComponent implements OnInit {
-  
+  proj:any;
 
   constructor(private service:TrackerService) { }
 
   ProjectList:any=[];
+  ModalTitle!: String;
+  ActivateAddEditPrjComp: boolean=false;
+  
 
   ngOnInit(): void {
     this.refreshProjectList();
@@ -23,6 +26,39 @@ export class ViewProjectsComponent implements OnInit {
 
       // console.log(this.ProjectList)
     
+  }
+  uplodProject(){
+    this.proj={
+      ProjectId:0,
+      project_name:'',
+      project_type:'',
+      project_landingpage:'',
+      project_description:'',
+      project_owner:'',
+      project_member1:'',
+      project_member2:'',
+      project_member3:'',
+      project_member4:'',
+      project_member5:'',
+      project_member6:'',
+      github_link :''
+    }
+    this.ModalTitle="upload Project";
+    this.ActivateAddEditPrjComp=true;
+  }
+
+
+  updateProject(project: any){
+    this.proj=project;
+    this.ModalTitle="Update Project";
+    this.ActivateAddEditPrjComp=true;
+
+  }
+
+
+  closeClick(){
+    this.ActivateAddEditPrjComp=false;
+    this.refreshProjectList();
   }
 
 
