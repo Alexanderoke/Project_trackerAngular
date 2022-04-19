@@ -9,13 +9,22 @@ import { ViewProjectsComponent } from './project/view-projects/view-projects.com
 import { TrackerService } from './tracker.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectComponent,
     UplodProjectComponent,
-    ViewProjectsComponent
+    ViewProjectsComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

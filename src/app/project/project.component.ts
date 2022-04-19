@@ -1,4 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,Router,ParamMap } from '@angular/router';
+
+// export class UsersList {
+//   constructor(
+//     public id: number,
+//     public first_tname: string,
+//     public last_name: string,
+//     public department: string,
+//     public email: string,
+    
+//   ) {
+//   }
+// }
 
 @Component({
   selector: 'app-project',
@@ -7,9 +20,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  
+
+  constructor(private route: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  // viewProjects(){
+  //   this.router.navigate(['view'],{relativeTo: this.route});
+  // }
+
+  // uplodProject(){
+  //   this.router.navigate(['uplod'],{relativeTo: this.route});
+  // }
 }
