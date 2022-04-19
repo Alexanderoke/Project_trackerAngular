@@ -29,7 +29,7 @@ export class ViewProjectsComponent implements OnInit {
   }
   uplodProject(){
     this.proj={
-      ProjectId:0,
+      ProjectId:'',
       project_name:'',
       project_type:'',
       project_landingpage:'',
@@ -48,10 +48,20 @@ export class ViewProjectsComponent implements OnInit {
   }
 
 
-  updateProject(project: any){
+  updateProject(project:any){
     this.proj=project;
     this.ModalTitle="Update Project";
     this.ActivateAddEditPrjComp=true;
+
+  }
+
+  deleteProject(project:any){
+    if (confirm('Are you sure You want to Delete?')){
+      this.service.deleteProject(project.ProjectId).subscribe(data=>{
+        alert(data.toString());
+        this.refreshProjectList();
+      });
+    }
 
   }
 

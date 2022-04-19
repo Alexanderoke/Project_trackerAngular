@@ -13,7 +13,7 @@ export class UplodProjectComponent implements OnInit {
   ProjectId!: string;
   project_name!:string;
   project_type!: string;
-  project_landingpage!:ImageData
+  project_landingpage!:any
   project_description!:string
   project_owner!:string
   project_member1!:string
@@ -72,6 +72,7 @@ export class UplodProjectComponent implements OnInit {
 
   updateProject(){
     let input= {
+    ProjectId:this.ProjectId,
     project_name:this.project_name,  
     project_type:this.project_type,
     project_landingpage:this.project_landingpage,
@@ -88,6 +89,10 @@ export class UplodProjectComponent implements OnInit {
     // console.log(input);
     this.uplodService.updateProject(input).subscribe(res=>{alert(res.toString());
     });
+  }
+
+  UplodPhoto(input:any){
+    this.uplodService.UploadPhoto(input).subscribe(res=>{alert(res.toString());});
   }
     // console.warn(val);
 

@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TrackerService {
-  readonly APIUrl = "http://127.0.0.1:8000";
+  readonly APIUrl = "https://protrackerokedrf.herokuapp.com";
   // "https://trakadrf.herokuapp.com/project"
-  readonly PhotoUrl = "http://127.0.0.1:8000/media/"
+  readonly PhotoUrl = "https://protrackerokedrf.herokuapp.com/media"
 
   constructor(private http:HttpClient) { }
 
@@ -22,12 +22,12 @@ export class TrackerService {
   }
 
   UploadPhoto(val:any){
-    return this.http.post(this.APIUrl+'/SaveFile/', val);
+    return this.http.post(this.PhotoUrl+'/SaveFile/', val);
   }
 
 
   updateProject(val:any){
-    return this.http.put(this.APIUrl +'/project/',val);
+    return this.http.put(this.APIUrl +'/project/9',val);
   }
 
   deleteProject(del:any){
@@ -35,11 +35,11 @@ export class TrackerService {
   }
 
   registerUser(userData: any): Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/api/register/',userData);
+    return this.http.post('https://protrackerokedrf.herokuapp.com/api/register/',userData);
   }
 
   loginUser(userData: any): Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/api/login/',userData)
+    return this.http.post('https://protrackerokedrf.herokuapp.com/api/login/',userData)
   }
   // methods to consume the get, post, update and delete  Apis here.
 }
